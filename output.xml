@@ -1,124 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 15:03:43.188" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 16:09:47.835" rpa="false" schemaversion="2">
 <suite id="s1" name="Robot Framework" source="C:\Users\user\Desktop\robot_framework">
 <suite id="s1-s1" name="Login Suite" source="C:\Users\user\Desktop\robot_framework\login_suite">
 <suite id="s1-s1-s1" name="Verify Valid Credential Suite" source="C:\Users\user\Desktop\robot_framework\login_suite\verify_valid_credential_suite.robot">
 <test id="s1-s1-s1-t1" name="Verify Valid Credentials Test">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=edge</arg>
-<arg>executable_path=${EXECDIR}\\drivers\\msedgedriver.exe</arg>
+<arg>executable_path=${EXECDIR}${/}drivers${/}msedgedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 15:03:48.362" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<msg timestamp="20220211 15:04:57.264" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20220211 15:04:57.275" level="FAIL">WebDriverException: Message: unknown error: DevToolsActivePort file doesn't exist
-Stacktrace:
-Backtrace:
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA973B2+360450]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C69BB57+885959]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C2971+1045217]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6BBD12+1017474]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6F7F08+1263736]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6F2ED3+1243203]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C83C0+1068336]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C94E8+1072728]
-	Ordinal0 [0x00007FF61C525ED3+24275]
-	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF61C7A82F7+277063]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61C9723D2+2946]
-	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF61C771B1C+53868]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8C553+315811]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8BE94+314084]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8BCDD+313645]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61C9E61F3+477603]
-	BaseThreadInitThunk [0x00007FFC8C947034+20]
-	RtlUserThreadStart [0x00007FFC8D5C2651+33]
-</msg>
-<status status="FAIL" starttime="20220211 15:03:48.362" endtime="20220211 15:04:57.275"/>
+<msg timestamp="20220211 16:09:52.779" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220211 16:09:52.778" endtime="20220211 16:10:09.851"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.276" endtime="20220211 15:04:57.276"/>
+<status status="PASS" starttime="20220211 16:10:09.852" endtime="20220211 16:10:10.043"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.276" endtime="20220211 15:04:57.276"/>
+<status status="PASS" starttime="20220211 16:10:10.044" endtime="20220211 16:10:10.050"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url= url=https://demo.openemr.io/b/openemr/index.php</arg>
+<arg>url=https://demo.openemr.io/b/openemr/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.277" endtime="20220211 15:04:57.277"/>
+<msg timestamp="20220211 16:10:10.051" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/'</msg>
+<status status="PASS" starttime="20220211 16:10:10.050" endtime="20220211 16:10:18.264"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=authUser</arg>
 <arg>admin=123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.277" endtime="20220211 15:04:57.277"/>
+<msg timestamp="20220211 16:10:18.266" level="INFO">Typing text 'admin=123' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20220211 16:10:18.264" endtime="20220211 16:10:18.447"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=clearPass</arg>
 <arg>pass</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.277" endtime="20220211 15:04:57.277"/>
+<msg timestamp="20220211 16:10:18.447" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20220211 16:10:18.521" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220211 16:10:18.668" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220211 16:10:18.447" endtime="20220211 16:10:18.668"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>name=languageChoice</arg>
 <arg>English (Indian)</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.278" endtime="20220211 15:04:57.278"/>
+<msg timestamp="20220211 16:10:18.668" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20220211 16:10:18.668" endtime="20220211 16:10:18.785"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.278" endtime="20220211 15:04:57.278"/>
+<msg timestamp="20220211 16:10:18.785" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220211 16:10:18.785" endtime="20220211 16:10:20.308"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>OpenEMR</arg>
+<arg>OpenEMR Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.278" endtime="20220211 15:04:57.278"/>
+<msg timestamp="20220211 16:10:20.327" level="INFO">Page title is 'OpenEMR Login'.</msg>
+<status status="PASS" starttime="20220211 16:10:20.308" endtime="20220211 16:10:20.328"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220211 15:04:57.278" endtime="20220211 15:04:57.278"/>
+<status status="PASS" starttime="20220211 16:10:20.328" endtime="20220211 16:10:22.904"/>
 </kw>
-<status status="FAIL" starttime="20220211 15:03:48.361" endtime="20220211 15:04:57.279">WebDriverException: Message: unknown error: DevToolsActivePort file doesn't exist
-Stacktrace:
-Backtrace:
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA973B2+360450]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C69BB57+885959]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C2971+1045217]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6BBD12+1017474]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6F7F08+1263736]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6F2ED3+1243203]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C83C0+1068336]
-	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61C6C94E8+1072728]
-	Ordinal0 [0x00007FF61C525ED3+24275]
-	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF61C7A82F7+277063]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61C9723D2+2946]
-	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF61C771B1C+53868]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8C553+315811]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8BE94+314084]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61CA8BCDD+313645]
-	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61C9E61F3+477603]
-	BaseThreadInitThunk [0x00007FFC8C947034+20]
-	RtlUserThreadStart [0x00007FFC8D5C2651+33]
-</status>
+<status status="PASS" starttime="20220211 16:09:52.777" endtime="20220211 16:10:22.905"/>
 </test>
-<status status="FAIL" starttime="20220211 15:03:43.466" endtime="20220211 15:04:57.307"/>
+<status status="PASS" starttime="20220211 16:09:48.284" endtime="20220211 16:10:22.908"/>
 </suite>
-<status status="FAIL" starttime="20220211 15:03:43.460" endtime="20220211 15:04:57.310"/>
+<status status="PASS" starttime="20220211 16:09:48.276" endtime="20220211 16:10:22.913"/>
 </suite>
-<status status="FAIL" starttime="20220211 15:03:43.210" endtime="20220211 15:04:57.313"/>
+<status status="PASS" starttime="20220211 16:09:47.880" endtime="20220211 16:10:22.917"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Login Suite">Robot Framework.Login Suite</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Verify Valid Credential Suite">Robot Framework.Login Suite.Verify Valid Credential Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Suite">Robot Framework.Login Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Verify Valid Credential Suite">Robot Framework.Login Suite.Verify Valid Credential Suite</stat>
 </suite>
 </statistics>
 <errors>
