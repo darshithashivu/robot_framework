@@ -1,104 +1,801 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 17:08:11.014" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220212 09:02:48.738" rpa="false" schemaversion="2">
 <suite id="s1" name="Robot Framework" source="C:\Users\user\Desktop\robot_framework">
 <suite id="s1-s1" name="Login Suite" source="C:\Users\user\Desktop\robot_framework\login_suite">
 <suite id="s1-s1-s1" name="Verify Invalid Credential Suite" source="C:\Users\user\Desktop\robot_framework\login_suite\verify_invalid_credential_suite.robot">
-<test id="s1-s1-s1-t1" name="Verify Valid Credentials Test">
+<test id="s1-s1-s1-t1" name="TC1">
 <kw name="Launch Browser" library="common_functionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=edge</arg>
 <arg>executable_path=${EXECDIR}${/}drivers${/}msedgedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220211 17:08:14.254" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220211 17:08:14.253" endtime="20220211 17:08:27.081"/>
+<msg timestamp="20220212 09:02:56.473" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220212 09:02:56.473" endtime="20220212 09:04:42.606"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220211 17:08:27.082" endtime="20220211 17:08:27.228"/>
+<status status="PASS" starttime="20220212 09:04:42.606" endtime="20220212 09:04:45.363"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220211 17:08:27.229" endtime="20220211 17:08:27.234"/>
+<status status="PASS" starttime="20220212 09:04:45.363" endtime="20220212 09:04:45.446"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=https://demo.openemr.io/b/openemr</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220211 17:08:27.236" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
-<status status="PASS" starttime="20220211 17:08:27.236" endtime="20220211 17:08:33.047"/>
+<msg timestamp="20220212 09:04:45.446" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20220212 09:04:45.446" endtime="20220212 09:05:24.317"/>
 </kw>
-<status status="PASS" starttime="20220211 17:08:14.252" endtime="20220211 17:08:33.047"/>
+<status status="PASS" starttime="20220212 09:02:56.472" endtime="20220212 09:05:24.317"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
-<arg>Mark</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220211 17:08:33.048" level="INFO">Typing text 'Mark' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20220211 17:08:33.048" endtime="20220211 17:08:33.148"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
-<arg>Mark123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220211 17:08:33.149" level="INFO">Typing password into text field 'id=clearPass'.</msg>
-<msg timestamp="20220211 17:08:33.239" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220211 17:08:33.384" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220211 17:08:33.149" endtime="20220211 17:08:33.384"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>Greek</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220211 17:08:33.385" level="INFO">Selecting options from selection list 'name=languageChoice' by label Greek.</msg>
-<status status="PASS" starttime="20220211 17:08:33.384" endtime="20220211 17:08:33.623"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220211 17:08:33.625" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220211 17:08:33.624" endtime="20220211 17:08:35.262"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Invalid')]</arg>
+<kw name="Verify Invalid Credentials Template">
+<arg>Jonh</arg>
+<arg>john123</arg>
+<arg>Dutch</arg>
 <arg>Invalid username or password</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220211 17:08:35.331" level="INFO">Element '//div[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
-<status status="PASS" starttime="20220211 17:08:35.262" endtime="20220211 17:08:35.332"/>
+<msg timestamp="20220212 09:05:24.327" level="FAIL">No keyword with name 'Verify Invalid Credentials Template' found.</msg>
+<status status="FAIL" starttime="20220212 09:05:24.326" endtime="20220212 09:05:24.327"/>
 </kw>
 <kw name="End Browser" library="common_functionality" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220211 17:08:35.822" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220211 17:08:35.333" endtime="20220211 17:08:35.822"/>
+<msg timestamp="20220212 09:07:26.025" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E991E+811662]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A20433B+920747]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A278310+1395840]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A25306A+1243610]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A267BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:07:32.168" level="FAIL">TimeoutException: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E991E+811662]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A20433B+920747]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A278310+1395840]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A25306A+1243610]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A267BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<status status="FAIL" starttime="20220212 09:05:24.329" endtime="20220212 09:07:32.169"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220211 17:08:35.823" endtime="20220211 17:08:38.194"/>
+<status status="PASS" starttime="20220212 09:07:32.169" endtime="20220212 09:08:04.255"/>
 </kw>
-<status status="PASS" starttime="20220211 17:08:35.332" endtime="20220211 17:08:38.195"/>
+<status status="FAIL" starttime="20220212 09:05:24.328" endtime="20220212 09:08:04.256">TimeoutException: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E991E+811662]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A20433B+920747]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A278310+1395840]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A253...
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
 </kw>
-<status status="PASS" starttime="20220211 17:08:14.252" endtime="20220211 17:08:38.195"/>
+<status status="FAIL" starttime="20220212 09:02:56.472" endtime="20220212 09:08:04.312">No keyword with name 'Verify Invalid Credentials Template' found.
+
+Also teardown failed:
+TimeoutException: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E991E+811662]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A20433B+920747]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A278310+1395840]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A253...
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
+</test>
+<test id="s1-s1-s1-t2" name="TC2">
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=edge</arg>
+<arg>executable_path=${EXECDIR}${/}drivers${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 09:08:04.317" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220212 09:08:04.315" endtime="20220212 09:09:12.553"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220212 09:09:12.553" endtime="20220212 09:09:12.725"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220212 09:09:12.725" endtime="20220212 09:09:12.729"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/b/openemr</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220212 09:09:12.731" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<msg timestamp="20220212 09:09:23.275" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: window was already closed
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ED7FA+827754]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:09:23.502" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA388+814328]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1F5CF5+861797]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA7C9+815417]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA263+814035]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8930+807584]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FD40A+892282]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A268672+1331170]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A25306A+1243610]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A267BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<status status="FAIL" starttime="20220212 09:09:12.730" endtime="20220212 09:09:23.503"/>
+</kw>
+<status status="FAIL" starttime="20220212 09:08:04.315" endtime="20220212 09:09:23.505"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 09:09:47.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:09:48.007" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<status status="FAIL" starttime="20220212 09:09:23.506" endtime="20220212 09:09:48.008"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 09:09:48.009" endtime="20220212 09:09:50.386"/>
+</kw>
+<status status="FAIL" starttime="20220212 09:09:23.505" endtime="20220212 09:09:50.387">WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
+</kw>
+<status status="FAIL" starttime="20220212 09:08:04.313" endtime="20220212 09:09:50.388">Setup failed:
+WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA388+814328]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1F5CF5+861797]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA7C9+815417]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA...
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+
+Also teardown failed:
+WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
+</test>
+<test id="s1-s1-s1-t3" name="TC3">
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=edge</arg>
+<arg>executable_path=${EXECDIR}${/}drivers${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 09:09:50.394" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220212 09:09:50.393" endtime="20220212 09:09:56.338"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220212 09:09:56.338" endtime="20220212 09:09:56.461"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220212 09:09:56.462" endtime="20220212 09:09:56.466"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/b/openemr</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220212 09:09:56.467" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20220212 09:09:56.467" endtime="20220212 09:10:29.962"/>
+</kw>
+<status status="PASS" starttime="20220212 09:09:50.392" endtime="20220212 09:10:29.962"/>
+</kw>
+<kw name="Verify Invalid Credentials Template">
+<arg>Mark</arg>
+<arg>Mark123</arg>
+<arg>Greek</arg>
+<arg>Invalid username or password</arg>
+<msg timestamp="20220212 09:10:29.967" level="FAIL">No keyword with name 'Verify Invalid Credentials Template' found.</msg>
+<status status="FAIL" starttime="20220212 09:10:29.967" endtime="20220212 09:10:29.967"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 09:10:42.397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220212 09:10:29.968" endtime="20220212 09:10:42.397"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 09:10:42.397" endtime="20220212 09:10:44.869"/>
+</kw>
+<status status="PASS" starttime="20220212 09:10:29.968" endtime="20220212 09:10:44.869"/>
+</kw>
+<status status="FAIL" starttime="20220212 09:09:50.390" endtime="20220212 09:10:44.869">No keyword with name 'Verify Invalid Credentials Template' found.</status>
+</test>
+<test id="s1-s1-s1-t4" name="Verify Valid Credentials Test">
+<kw name="Launch Browser" library="common_functionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=edge</arg>
+<arg>executable_path=${EXECDIR}${/}drivers${/}msedgedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220212 09:10:44.871" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220212 09:10:44.871" endtime="20220212 09:10:48.087"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220212 09:10:48.087" endtime="20220212 09:10:48.210"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220212 09:10:48.210" endtime="20220212 09:10:48.212"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/b/openemr</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220212 09:10:48.213" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<msg timestamp="20220212 09:11:01.876" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ED449+826809]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:11:01.877" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA388+814328]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1F5CF5+861797]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA7C9+815417]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA263+814035]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8930+807584]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FD40A+892282]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A268672+1331170]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A25306A+1243610]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A267BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<status status="FAIL" starttime="20220212 09:10:48.212" endtime="20220212 09:11:01.877"/>
+</kw>
+<status status="FAIL" starttime="20220212 09:10:44.870" endtime="20220212 09:11:01.878"/>
+</kw>
+<kw name="End Browser" library="common_functionality" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220212 09:11:26.209" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:11:26.210" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<status status="FAIL" starttime="20220212 09:11:01.879" endtime="20220212 09:11:26.210"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220212 09:11:26.210" endtime="20220212 09:11:28.432"/>
+</kw>
+<status status="FAIL" starttime="20220212 09:11:01.878" endtime="20220212 09:11:28.433">WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
+</kw>
+<status status="FAIL" starttime="20220212 09:10:44.870" endtime="20220212 09:11:28.433">Setup failed:
+WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA388+814328]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1F5CF5+861797]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA7C9+815417]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EA...
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+
+Also teardown failed:
+WebDriverException: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+    [ Message content over the limit has been removed. ]
+...Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]</status>
 </test>
 <doc>This suit file handles all the test case related to the
 valid credentials</doc>
-<status status="PASS" starttime="20220211 17:08:11.180" endtime="20220211 17:08:38.197"/>
+<status status="FAIL" starttime="20220212 09:02:49.097" endtime="20220212 09:11:28.434"/>
 </suite>
-<status status="PASS" starttime="20220211 17:08:11.175" endtime="20220211 17:08:38.202"/>
+<status status="FAIL" starttime="20220212 09:02:49.095" endtime="20220212 09:11:28.436"/>
 </suite>
-<status status="PASS" starttime="20220211 17:08:11.019" endtime="20220211 17:08:38.206"/>
+<status status="FAIL" starttime="20220212 09:02:48.757" endtime="20220212 09:11:28.449"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Suite">Robot Framework.Login Suite</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Verify Invalid Credential Suite">Robot Framework.Login Suite.Verify Invalid Credential Suite</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1" name="Login Suite">Robot Framework.Login Suite</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s1" name="Verify Invalid Credential Suite">Robot Framework.Login Suite.Verify Invalid Credential Suite</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220212 09:07:26.025" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E991E+811662]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E81A3+805651]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E8A7F+807919]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A20433B+920747]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A278310+1395840]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A25306A+1243610]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A267BDC+1328460]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:09:23.275" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: window was already closed
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FBB57+885959]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ED7FA+827754]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:09:47.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:11:01.876" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ED449+826809]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
+<msg timestamp="20220212 09:11:26.209" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: MicrosoftEdge=97.0.1072.76)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5F73B2+360450]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1FB9F7+885607]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EC454+822724]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1ECB95+824581]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1EE75D+831693]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A1E75EF+802655]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2671B8+1325864]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A252ED3+1243203]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2283C0+1068336]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF64A2294E8+1072728]
+	Ordinal0 [0x00007FF64A085ED3+24275]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A3082F7+277063]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A4D23D2+2946]
+	Microsoft::Applications::Events::LogManagerProvider::CreateLogManager [0x00007FF64A2D1B1C+53868]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EC553+315811]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBE94+314084]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5EBCDD+313645]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF64A5461F3+477603]
+	BaseThreadInitThunk [0x00007FFC8C947034+20]
+	RtlUserThreadStart [0x00007FFC8D5C2651+33]
+</msg>
 </errors>
 </robot>
